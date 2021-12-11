@@ -1,0 +1,27 @@
+#初期インストール
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import warnings
+
+# Jupyter 上で図を表示するためのコマンド
+%matplotlib inline
+
+# warningを表示させない
+warnings.simplefilter('ignore')
+
+from sklearn.model_selection import train_test_split # 訓練データと検証データに分ける関数
+from sklearn.metrics import confusion_matrix, accuracy_score # 混同行列, 予測正解率を求める関数
+
+
+#学習ライブラり
+from sklearn import tree　　#決定木で学習する際
+from sklearn.linear_model import LogisticRegression　#ロジスティック回帰で学習する際
+from sklearn.ensemble import RandomForestClassifier　　#ランダムフォレストで学習する際
+from sklearn.cluster import KMeans　　#K-means法で学習
+
+#どの学習方法でも共通で使えるやつ
+from sklearn.metrics import precision_score　　#適合率を出す際に記述
+from sklearn.metrics import recall_score　　　#再現率を出す際に記述
+from sklearn.metrics import f1_score　　　#F値を出す際に記述
